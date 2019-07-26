@@ -6,6 +6,7 @@
 
 module.exports = {
   /* Your site config here */
+
   siteMetadata: {
     title: "BackRoads",
     description:
@@ -13,5 +14,17 @@ module.exports = {
     author: "@devaurion",
     data: ["item1", "item2"],
   },
-  plugins: [`gatsby-plugin-sass`, `gatsby-plugin-styled-components`],
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
+    },
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-styled-components`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+  ],
 }
