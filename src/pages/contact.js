@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/Layout"
 import StyledHero from "../components/StyledHero"
-import { graphql, staticQuery } from "gatsby"
+import { graphql } from "gatsby"
 import Contact from "../components/Contact/Contact"
 
 export default function contact({ data }) {

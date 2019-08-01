@@ -6,7 +6,7 @@ import { Link } from "gatsby"
 import About from "../components/Home/About"
 import Services from "../components/Home/Services"
 import StyledHero from "../components/StyledHero"
-import { graphql, staticQuery } from "gatsby"
+import { graphql } from "gatsby"
 import FeaturedTours from "../components/Home/FeaturedTours"
 
 export default ({ data }) => (

@@ -1,8 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 import Layout from "../components/Layout"
 import StyledHero from "../components/StyledHero"
-import { graphql, staticQuery } from "gatsby"
+import { graphql } from "gatsby"
 
 const blog = ({ data }) => {
   return (
