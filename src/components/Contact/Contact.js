@@ -37,6 +37,7 @@ const Contact = () => {
               className={styles.formControl}
               placeholder="hello there.."
             />
+            
             <div>
               <input type="submit" value="send" className={styles.submit} />
             </div>
