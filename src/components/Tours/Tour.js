@@ -4,10 +4,34 @@ import styles from "../../css/tour.module.css"
 import { FaMap } from "react-icons/fa"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import PropTypes from "prop-types"
+import { useStaticQuery, graphql } from "gatsby"
+
+const getImage = graphql`
+  query {
+    file(relativePath: { eq: "defaultBcg.jpeg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+  }
+`
 
 const Tour = ({ tour }) => {
+  const data = useStaticQuery(getImage)
+  const img = data.file.childImageSharp.fluid
+
   const { name, price, country, days, slug, images } = tour
-  let mainImage = images[0].fluid
+
+  // let mainImage
+  // if (images) {
+  //   mainImage = images[0].fluid
+  // } else {
+  //   mainImage = img
+  // }
+
+  let mainImage = images ? images[0].fluid : img
 
   return (
     <article className={styles.tour}>
@@ -37,8 +61,8 @@ Tour.propTypes = {
   tour: PropTypes.shape({
     name: PropTypes.string.isRequired,
     country: PropTypes.string.isRequired,
-    price: PropTypes.string.isRequired,
-    days: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    days: PropTypes.number.isRequired,
     images: PropTypes.arrayOf(PropTypes.object).isRequired,
   }),
 }
