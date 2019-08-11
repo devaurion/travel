@@ -17,7 +17,7 @@ module.exports = {
     author: "@agumjunianto",
     twitterUsername: "@agumjun",
     image: "/defaultBcg.jpeg",
-    siteUrl: "",
+    siteUrl: "https://gatsby-travel-site.netlify.com",
   },
   plugins: [
     {
