@@ -14,8 +14,10 @@ module.exports = {
     title: "BackRoads",
     description:
       "Explore awesome worldwide tours & discover what makes each of them unique. Forget your daily routine & say yes to adventure",
-    author: "@devaurion",
-    data: ["item1", "item2"],
+    author: "@agumjunianto",
+    twitterUsername: "@agumjun",
+    image: "/defaultBcg.jpeg",
+    siteUrl: "",
   },
   plugins: [
     {
@@ -37,6 +39,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-transition-link`,
-    `gatsby-plugin-playground`
+    `gatsby-plugin-playground`,
+    `gatsby-plugin-react-helmet`,
   ],
 }
