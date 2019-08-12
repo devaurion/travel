@@ -7,6 +7,7 @@ import Img from "gatsby-image"
 import { FaMoneyBillWave, FaMap } from "react-icons/fa"
 import Day from "../components/SingleTour/Day"
 import Banner from "../components/Banner"
+import SEO from "../components/SEO"
 
 const Template = ({ data }) => {
   const {
@@ -24,6 +25,7 @@ const Template = ({ data }) => {
 
   return (
     <Layout>
+      <SEO title={name} />
       <StyledHero img={mainImage.fluid}>
         <Banner title={name}></Banner>
       </StyledHero>
