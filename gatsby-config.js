@@ -19,7 +19,9 @@ module.exports = {
     image: "/defaultBcg.jpeg",
     siteUrl: "https://gatsby-travel-site.netlify.com",
   },
+
   plugins: [
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -40,6 +42,5 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-playground`,
-    `gatsby-plugin-react-helmet`,
   ],
 }
